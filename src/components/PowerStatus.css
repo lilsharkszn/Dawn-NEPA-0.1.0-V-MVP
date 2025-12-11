@@ -1,0 +1,91 @@
+
+
+/* Location / area tag */
+.tag {
+  display: inline-block;
+  background: #4caf50;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Status box */
+.status-box {
+  padding: 18px 16px;
+  background: rgba(76, 175, 80, 0.12);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Current power status */
+#currentStatus {
+  font-size: 22px;
+  font-weight: 700;
+  color: #065f46; /* darker green for clarity */
+  margin: 0;
+}
+
+/* Last updated text */
+#lastUpdated {
+  font-size: 0.88rem;
+  color: #333;
+  opacity: 0.85;
+}
+
+/* Location title */
+#locationTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+/* Change location button */
+.secondary-btn {
+  align-self: flex-start;
+  background: #333;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.secondary-btn:hover {
+  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.powerstatcard {
+  background: #ffffff;
+  padding: clamp(14px, 1.6vw, 28px);
+  margin-bottom: 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(3px);
+  transform: translateY(0);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .card {
+    padding: 14px 12px;
+  }
+  #currentStatus {
+    font-size: 20px;
+  }
+  .secondary-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

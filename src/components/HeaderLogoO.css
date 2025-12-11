@@ -1,0 +1,9 @@
+/* HeaderLogoO styles */
+.logo-flickerr {
+  height: 1em;
+  width: auto;
+  object-fit: contain;
+  transform: translateY(3px);
+  /* flex: 1; */
+  /* background-color: bisque; */
+}

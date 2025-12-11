@@ -1,0 +1,93 @@
+
+/* Card heading */
+.card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Buttons */
+.on-btn,
+.off-btn {
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Light ON button */
+.on-btn {
+  background: #20d16a;
+}
+
+.on-btn:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(39, 174, 96, 0.3);
+}
+
+/* Light OFF button */
+.off-btn {
+  background: #f33622;
+}
+
+.off-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(192, 57, 43, 0.3);
+}
+
+/* Notification box */
+#notificationBox {
+  font-size: 0.95rem;
+  color: #444;
+  min-height: 1.4em;
+  margin-top: 6px;
+}
+
+/* PowerStatus button placeholder */
+#powerStatusBtn {
+  background: #111;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#powerStatusBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.poweronoffcard {
+  background: #ffffff;
+  padding: clamp(14px, 1.6vw, 28px);
+  margin-bottom: 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(3px);
+  transform: translateY(0);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .on-btn,
+  .off-btn,
+  #powerStatusBtn {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+}

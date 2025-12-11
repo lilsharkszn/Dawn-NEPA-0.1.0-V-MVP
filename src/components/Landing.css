@@ -1,0 +1,100 @@
+/* Fullscreen dark landing with video */
+.landing-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background video */
+.landing-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Centered logo */
+.logo-flicker {
+  /* background: white; */
+  position: absolute;
+  z-index: 2100;
+  text-align: center;
+  border-radius: 10px;
+  animation: flicker 1.5s infinite alternate;
+  /* color: white; */
+}
+
+.logo-flicker h1 {  
+  color: green;
+  text-shadow: #fff;
+  
+}
+
+
+.landingLogo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  font-weight: Large;
+  line-height: 1;
+  font-family: 'Courier New', monospace;
+  transform: translateY(0);
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 2px #000, 0 0 4px #000;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+}
+
+/* Skip button overlay */
+.landing-skip {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.18s ease, transform 0.18s ease;
+  z-index: 2200;
+}
+
+.landing-skip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .landing-skip {
+    bottom: 16px;
+    right: 16px;
+    padding: 6px 10px;
+  }
+
+  .landingLogo-text {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .landingLogo-text {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+}

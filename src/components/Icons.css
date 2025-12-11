@@ -1,0 +1,7 @@
+/* Icon helper styles */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #6b7280;
+}

@@ -1,0 +1,166 @@
+/* Footer container */
+.footer {
+  padding: 16px 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 42, 120, 0.95),
+    rgba(64, 163, 68, 0.92)
+  );
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  animation: fadeIn 0.6s ease;
+  backdrop-filter: blur(6px) saturate(1.05);
+}
+
+/* Brand / Title */
+.footer .brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.Footerlogo-text {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+  font-family: "Courier New", monospace;
+}
+
+.Footerlogo-text img {
+  height: 1.1em;
+  transition: transform 0.35s ease;
+}
+
+/* Hover logo animation */
+.Footerlogo-text:hover img {
+  transform: rotate(-12deg) scale(1.05);
+}
+
+.footer-subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Navigation links */
+.footer-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.98);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.footer-links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Credits / Meta */
+.footer .meta {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.credits {
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet & Medium Screens */
+@media (max-width: 900px) {
+  .footer {
+    padding: 18px 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 10px;
+  }
+
+  .footer .meta {
+    text-align: center;
+    margin-top: 6px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-links {
+    order: 3;
+  }
+
+  .footer .meta {
+    text-align: center;
+  }
+}
+
+/* Image adjustments for other UI elements */
+@media (max-width: 1023px) {
+  .CommunityImg {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .CommunityImg,
+  .lightbulbs {
+    max-width: 45%;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .CommunityImg {
+    max-width: 40%;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .CommunityImg,
+  .callout,
+  .lead {
+    max-width: 100%;
+    padding: 0;
+    margin-right: 0;
+  }
+}

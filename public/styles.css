@@ -1,0 +1,201 @@
+/* RESET */
+
+:root {
+  /* PRIMARY COLORS */
+  --primary-blue: #1c2a78; /* Deep electric blue */
+  --primary-green: #4caf50; /* Neon green / power vibe */
+  --primary-gradient: linear-gradient(135deg, #1c2a78, #4caf50);
+
+  /* SECONDARY COLORS */
+  --secondary-light: #a7d8f5; /* Light sky blue accent */
+  --secondary-dark: #0b1b40; /* Dark navy accent */
+
+  /* BUTTON COLORS */
+  --btn-on: #2ecc71; /* Green for Light ON */
+  --btn-off: #e74c3c; /* Red for Light OFF */
+  --btn-hover: rgba(255, 255, 255, 0.35);
+
+  /* BACKGROUND COLORS */
+  --bg-light: #f2f2f2; /* Light app background */
+  --bg-dark: #121212; /* Dark mode background */
+  --card-light: #ffffff; /* Card background light */
+  --card-dark: rgba(255, 255, 255, 0.05); /* Card background dark */
+
+  /* TEXT COLORS */
+  --text-light: #222222; /* Default text dark */
+  --text-dark: #eaeaea; /* Dark mode text */
+  --text-accent: #4caf50; /* Accent text / band tag */
+
+  /* SHADOWS */
+  --shadow-light: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Card Wrapper */
+/* .card {
+  background: #ffffff;
+  padding: clamp(14px, 1.6vw, 28px);
+  margin-bottom: 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(3px);
+  transform: translateY(0);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+} */
+
+body {
+  color: #222;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+  background-image: url(./assets/background1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Responsive base font sizing for better scalability */
+html {
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* Main container: center content and limit width on very large screens */
+main,
+.app-root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* DARK MODE */
+body .dark {
+  background: #121212ea;
+  color: #eaeaea;
+  border-radius: 15px;
+}
+
+.dark .card {
+  background: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* .dark h2{
+  color: #ffffff00; 
+} */
+
+
+
+.dark .darkmode-btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .on-btn {
+  background: #27ae60;
+}
+
+.dark .off-btn {
+  background: #d63031;
+}
+
+.dark .status-box {
+  background: rgba(0, 255, 130, 0.12);
+}
+
+/* Dark mode adjustments: keep contrast and readable spacing */
+body.dark .feedback-page,
+body.dark .contact-page {
+  color: var(--text-dark, #eaeaea);
+}
+
+body.dark .card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .feedback-form .label,
+body.dark .feedback-form input,
+body.dark .feedback-form textarea {
+  color: var(--text-dark, #eaeaea);
+}
+
+/* keep original green ON gradient in dark mode per user preference */
+body.dark .primary-btn {
+  background: linear-gradient(90deg, var(--btn-on, #2ecc71), #27ae60);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(6, 12, 20, 0.32);
+}
+
+.dark .label {
+  color: rgba(255, 255, 255, 0.185);
+}
+
+:root {
+  background: rgba(0, 0, 0, 0.04);
+  color: #0f172a;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* INPUTS */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1.3px solid #ccc;
+  font-size: 15px;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 8px;
+  transition: transform 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global page layout */
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1; 
+}
