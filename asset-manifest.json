@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/css/main.f1c04c45.css",
-    "main.js": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/js/main.f651848c.js",
+    "main.css": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/css/main.76cf6317.css",
+    "main.js": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/js/main.45b502d3.js",
     "static/media/swingingbulb.mp4": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/media/swingingbulb.dbc49dc034eefafc4058.mp4",
     "static/media/homelight.mp4": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/media/homelight.e995c0bafd158fa2eb42.mp4",
     "static/media/community.jpg": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/media/community.46cb73852eae84ef6159.jpg",
+    "static/media/background1.jpeg": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/media/background1.7a919199b0146b2f313f.jpeg",
     "static/media/onoffbulb.jpeg": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/media/onoffbulb.dcdc4cda1c864697deaf.jpeg",
     "index.html": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/index.html",
-    "main.f1c04c45.css.map": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/css/main.f1c04c45.css.map",
-    "main.f651848c.js.map": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/js/main.f651848c.js.map"
+    "main.76cf6317.css.map": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/css/main.76cf6317.css.map",
+    "main.45b502d3.js.map": "/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP/static/js/main.45b502d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1c04c45.css",
-    "static/js/main.f651848c.js"
+    "static/css/main.76cf6317.css",
+    "static/js/main.45b502d3.js"
   ]
 }
