@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+ÂÂÂ tools {
+ÂÂÂÂÂÂÂ nodejs 'NodeJS-25'
+ÂÂÂ }
+ÂÂÂ stages {
+ÂÂÂÂÂÂÂ stage('Checkout Code') {
+ÂÂÂÂÂÂÂÂÂÂÂ steps {
+ÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂ git branch: 'main', url: 'https://github.com/lilsharkszn/Dawn-NEPA-0.1.0-V-MVP'
+ÂÂÂÂÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ stage('Install Dependencies') {
+ÂÂÂÂÂÂÂÂÂÂÂ steps {
+ÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂ sh 'npm install'
+ÂÂÂÂÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ stage('Build React App') {
+ÂÂÂÂÂÂÂÂÂÂÂ steps {
+ÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂ sh 'npm run build'
+ÂÂÂÂÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ stage('Archive Artifacts') {
+ÂÂÂÂÂÂÂÂÂÂÂ steps {
+ÂÂÂÂÂÂÂÂÂÂÂÂÂÂÂ archiveArtifacts artifacts: 'build/**', fingerprint: true
+ÂÂÂÂÂÂÂÂÂÂÂ }
+ÂÂÂÂÂÂÂ }
+ÂÂÂ }
+ÂÂÂ post {
+ÂÂÂÂÂÂÂ success { echo 'Build succeeded!' }
+ÂÂÂÂÂÂÂ failure { echo 'Build failed!' }
+ÂÂÂ }
+}
