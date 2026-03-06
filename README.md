@@ -1,3 +1,5 @@
+TESTING CICD. 
+
 # Dawn-NEPA – Nigeria Light Tracker
 
 **Dawn-NEPA** is a React-based web application that tracks electricity availability across Nigeria. It is designed for real-time monitoring and provides a simple, user-friendly interface.
